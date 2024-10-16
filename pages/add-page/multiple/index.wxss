@@ -1,0 +1,19 @@
+.preview {
+  display: flex;
+}
+.preview .preview-box {
+  flex-shrink: 0;
+  width: 162rpx;
+  height: 162rpx;
+  border-radius: 10rpx;
+  overflow: hidden;
+  margin-right: 20rpx;
+}
+.preview-box image{
+  width: 100%;
+  height: 100%;
+}
+.preview-box video {
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,33 @@
+<view class="tab-bar">
+  <view wx:for="{{list}}" wx:key="index" class="tab-bar-item {{item.bulge?'bulge':''}}" data-path="{{item.pagePath}}" data-type="{{item.type || ''}}" data-index="{{index}}" bindtap="switchTab">
+    <view wx:if="{{item.bulge}}" class="tab-bar-bulge tab-bar-view"></view>
+    <image class="image" src="{{selected === index ? item.selectedIconPath : item.iconPath}}"></image>
+    <view wx:if="{{item.text}}" style="color: {{selected === index ? selectedColor : color}}" class="tab-bar-view">{{item.text}}</view>
+  </view>
+</view>
+
+<t-popup visible="{{visible}}" bind:visible-change="onVisibleChange" placement="{{'bottom'}}">
+  <view class="add-box">
+    <view class="tit">发布功能</view>
+    <view class="con">
+      <view class="con-box" bind:tap="toAdd" data-type="project">
+        <view class="image">
+          
+        </view>
+        <view class="content">
+          <view class="content-tit">发布合作项目</view>
+          <view class="content-con">寻求项目合作，寻求资源，赞助</view>
+        </view>
+      </view>
+      <view class="con-box" bind:tap="toAdd" data-type="resource">
+        <view class="image">
+          
+        </view>
+        <view class="content">
+          <view class="content-tit">发布项目资源</view>
+          <view class="content-con">资源互换，异业合作</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</t-popup>

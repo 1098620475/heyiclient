@@ -1,0 +1,189 @@
+var filter = {
+  getDate: function (num, type) {
+    var dd = getDate(num);
+    var y = dd.getFullYear();
+    var m = dd.getMonth() + 1;
+    var d = dd.getDate();
+    var h = dd.getHours();
+    var i = dd.getMinutes();
+    var s = dd.getSeconds();
+    m = m < 10 ? '0' + m : m;
+    d = d < 10 ? '0' + d : d;
+    h = h < 10 ? '0' + h : h;
+    i = i < 10 ? '0' + i : i;
+    s = s < 10 ? '0' + s : s;
+    if (type) {
+      return y + '-' + m + '-' + d + ' ' + h + ':' + i + ':' + s
+    } else {
+      return y + '-' + m + '-' + d
+    }
+  },
+  getNum: function (carInfo, lineInfo) {
+    var num = carInfo.num
+    var startLimit = carInfo.startLimit || []
+    var endLimit = carInfo.endLimit || []
+    var limitArr = startLimit.concat(endLimit)
+    limitArr.some(function(item){
+      if (item.name === lineInfo.start || item.name === lineInfo.end) {
+        num = item.num
+        return true
+      }
+    })
+    return num
+  },
+  getDateText: function (time) {
+    if (time === 'now') {
+      return '立即开始'
+    } else {
+      var textArr = ['今天', '明天', '后天']
+      var currentDate = getDate();
+      if (time - currentDate.getTime() < 0) {
+        return '过期任务'
+      }
+      var date = getDate(time);
+      var textIndex = date.getDate() - currentDate.getDate()
+      var tiText = '早上'
+      var hours = date.getHours()
+      var minutes = date.getMinutes()
+      if (hours < 12) {
+         tiText = '上午'
+      } else if (hours >= 12 && hours < 18) {
+        tiText = '下午'
+      } else {
+        tiText = '晚上'
+      }
+      return textArr[textIndex] + ' - ' + tiText + (hours < 10 ? '0' + hours: hours) + ':' + (minutes < 10 ? '0' + minutes: minutes)
+    }
+  },
+  toFix2: function (money) {
+    if (money.toString().indexOf(".") != -1 && money.toString().split(".")[1].length > 2) {
+      money = parseFloat(money).toFixed(2);
+    }
+    return parseFloat(money)
+  },
+  getSplit: function(text, zf, index) {
+    return text.split(zf)[index]; 
+  },
+  dateFormat: function(date) {
+    var date = getDate(date)
+    var seperator1 = "-";    
+    var seperator2 = ":";    
+    var month = date.getMonth() + 1;    
+    var strDate = date.getDate();    
+    if (month >= 1 && month <= 9) {        
+        month = "0" + month;    
+    }    
+    if (strDate >= 0 && strDate <= 9) {        
+        strDate = "0" + strDate;    
+    }    
+    var currentdate = date.getFullYear() + seperator1 + month + seperator1 + strDate + " " + date.getHours() + seperator2 + date.getMinutes()+ seperator2 + date.getSeconds();    
+    return currentdate;
+  },
+  getArraryTypeStatus: function(type, arr) {
+    if (!arr || !type) {
+      return false
+    } else {
+      return arr.indexOf(type) > -1
+    }
+  },
+  getTakeText: function (str) {
+    var strR = str
+    return strR.split(' ')[0] + ' ' +strR.split(' ')[1].split(':')[0] + ':' + strR.split(' ')[1].split(':')[1]
+  },
+  getFormatTime1: function(time) {
+    var date = getDate(time);
+    // 获取月份、日期、星期、小时、分钟和秒
+    var year = date.getFullYear();
+    var month = date.getMonth() + 1; // 月份是从0开始的，需要加1
+    var day = date.getDate();
+    var weekday = date.getDay(); // 星期是从0开始的，需要加1
+    var weekArr = ['日', '一', '二', '三', '四', '五', '六']
+    var hour = date.getHours();
+    var minute = date.getMinutes();
+    var second = date.getSeconds();
+
+    // 格式化日期和时间
+    var formattedDate = "";
+    formattedDate += year + '年 '
+    formattedDate += (month < 10 ? "0" + month : month) + "月" + (day < 10 ? "0" + day : day) + '日';
+    formattedDate += " 周" + weekArr[weekday];
+    // formattedDate += " " + (hour < 10 ? "0" + hour : hour) + ":" + (minute < 10 ? "0" + minute : minute);
+    // formattedDate += ":" + (second < 10 ? "0" + second : second);
+
+    // 输出格式化后的日期和时间
+    console.log(formattedDate, ';;;;;;;;;;;;;;;;;;;;;;;;;;;;;;');
+    return formattedDate
+  },
+  getFormatTime2: function(time) {
+    var date = getDate(time);
+    // 获取月份、日期、星期、小时、分钟和秒
+    var year = date.getFullYear();
+    var month = date.getMonth() + 1; // 月份是从0开始的，需要加1
+    var day = date.getDate();
+    var weekday = date.getDay(); // 星期是从0开始的，需要加1
+    var weekArr = ['日', '一', '二', '三', '四', '五', '六']
+    var hour = date.getHours();
+    var period = hour >= 12 ? '下午' : '上午';
+    var minute = date.getMinutes();
+    var second = date.getSeconds();
+
+    // 格式化日期和时间
+    var formattedDate = "";
+    // formattedDate += (month < 10 ? "0" + month : month) + "月" + (day < 10 ? "0" + day : day) + '日';
+    // formattedDate += " 周" + weekArr[weekday];
+    formattedDate += period
+    formattedDate += " " + (hour < 10 ? "0" + hour : hour) + ":" + (minute < 10 ? "0" + minute : minute);
+    // formattedDate += ":" + (second < 10 ? "0" + second : second);
+
+    // 输出格式化后的日期和时间
+    console.log(formattedDate, ';;;;;;;;;;;;;;;;;;;;;;;;;;;;;;');
+    return formattedDate
+  },
+  getFormatTime: function(time) {
+    var date = getDate(time);
+    // 获取月份、日期、星期、小时、分钟和秒
+    var year = date.getFullYear();
+    var month = date.getMonth() + 1; // 月份是从0开始的，需要加1
+    var day = date.getDate();
+    var weekday = date.getDay(); // 星期是从0开始的，需要加1
+    var weekArr = ['日', '一', '二', '三', '四', '五', '六']
+    var hour = date.getHours();
+    var minute = date.getMinutes();
+    var second = date.getSeconds();
+
+    // 格式化日期和时间
+    var formattedDate = "";
+    formattedDate += (month < 10 ? "0" + month : month) + "月" + (day < 10 ? "0" + day : day) + '日';
+    formattedDate += " 周" + weekArr[weekday];
+    formattedDate += " " + (hour < 10 ? "0" + hour : hour) + ":" + (minute < 10 ? "0" + minute : minute);
+    // formattedDate += ":" + (second < 10 ? "0" + second : second);
+
+    // 输出格式化后的日期和时间
+    console.log(formattedDate, ';;;;;;;;;;;;;;;;;;;;;;;;;;;;;;');
+    return formattedDate
+  }
+}
+
+var filterCarState = function (state) {
+  if (state === 'success') {
+    return '出票成功'
+  } else if (state === 'onstandby') {
+    return '车票候补中'
+  } else if (state === 'inprogress') {
+    return '出票中'
+  }
+}
+module.exports = {
+  getDate: filter.getDate,
+  getNum: filter.getNum,
+  getDateText: filter.getDateText,
+  toFix2: filter.toFix2,
+  getSplit: filter.getSplit,
+  dateFormat: filter.dateFormat,
+  getArraryTypeStatus: filter.getArraryTypeStatus,
+  getTakeText: filter.getTakeText,
+  getFormatTime1: filter.getFormatTime1,
+  getFormatTime2: filter.getFormatTime2,
+  getFormatTime: filter.getFormatTime,
+  filterCarState: filterCarState
+}

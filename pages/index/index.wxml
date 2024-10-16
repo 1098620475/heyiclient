@@ -1,0 +1,41 @@
+<component_nav class="nav_component" isSearch="{{false}}" v-title="{{'合亿'}}" bind:titleClick='toSchoolSelect' bind:commonNavAttr='commonNavAttr' showIcon='{{true}}'></component_nav>
+<referee></referee>
+<t-sticky offset-top="{{ offsetTop }}">
+  <t-tabs
+  defaultValue="{{0}}"
+  sticky
+  stickyProps="{{stickyProps}}"
+  bind:change="onTabsChange"
+  bind:click="onTabsClick"
+  bind:scroll="onStickyScroll"
+  t-class="custom-tabs"
+>
+  <t-tab-panel label="全部" value="0" />
+  <t-tab-panel label="找合作" value="1" />
+  <t-tab-panel label="找资源" value="2" />
+  <t-tab-panel label="找人脉" value="3" />
+</t-tabs>
+</t-sticky>
+<view class="project-list">
+  <view class="project-box" wx:for="{{projectList}}"  data-info="{{item}}" bind:tap="toDetail">
+    <view class="title">
+      <image class="title-icon" src="http://www.memeschool.top:8080/heyi/zBgPKulvCSAZ6e1a56977be5cf377a463e30856dde1e.png"></image>
+      <!-- <view class="title-icon" style="background-image: url(/assets/title.png);"></view> -->
+      <view class="title-con"><span>测试名称</span><i class="iconfont icon-vip"></i></view>
+      <view class="title-role">微帮推广站长</view>
+    </view>
+    <view class="content">
+      <image class="content-icon" src='http://www.memeschool.top:8080/heyi/zBgPKulvCSAZ6e1a56977be5cf377a463e30856dde1e.png'></image>
+      <view class="content-info">
+        <view class="content-info-tit"><span>【服务】</span>{{item.title}}</view>
+        <view class="tag">
+          <view class="tag-tit">太原市</view>
+          <view class="tag-tit">服务供应</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="bottom-box"></view>
+

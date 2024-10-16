@@ -1,0 +1,23 @@
+<view class="demo">
+  <!-- <markdown markdown="{{markdown}}"></markdown> -->
+  <t-demo title="项目标题" desc="">
+    <t-input
+      placeholder="请输入项目标题"
+      borderless="{{true}}"
+      style="{{style}}"
+      value="{{form.title}}"
+      bindchange="bindTitleInput"
+    />
+  </t-demo>
+  <t-demo title="项目描述" desc="">
+    <t-textarea bindchange='bindContentInput' t-class="external-class" placeholder="请输项目描述" disableDefaultPadding="{{true}}" />
+  </t-demo>
+  <t-demo title="项目文件" desc="">
+    <view class="upload-demo">
+      <multiple />
+    </view>
+  </t-demo>
+</view>
+
+<t-button block theme="primary" size="large" bind:tap="handleSubmit">提交</t-button>
+

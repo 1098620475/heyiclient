@@ -1,0 +1,82 @@
+/* components/referee/index.wxss */
+.title {
+  padding: 0 50rpx 0;
+  margin-bottom: 40rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.title .tit {
+  font-size: 30rpx;
+  font-weight: 700;
+  position: relative;
+  margin-top: 6rpx;
+}
+.title .more {
+  font-size: 24rpx;
+  color: #B8151A;
+}
+.title .tit:before {
+  content: '';
+  display: block;
+  width: 54rpx;
+  height: 54rpx;
+  border-radius: 50%;
+  background: #B8151A;
+  opacity: 0.1;
+  position: absolute;
+  top: -5rpx;
+}
+.scroll-box {
+  padding: 0 50rpx 0;
+  box-sizing: border-box;
+  width: 100%;
+}
+.box {
+  display: flex;
+}
+.box .head::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+.box .head {
+  overflow: hidden;
+  position: relative;
+  width: 140rpx;
+  height: 220rpx;
+  border-radius: 20rpx;
+  margin-right: 20rpx;
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-end;
+  background-image: url(http://www.memeschool.top:8080/heyi/YzwYR8oDhE41a01734d955a4c34185e9c92eeaf8ad75.png);
+  background-size: cover;
+  background-position: center;
+}
+.box .head .info {
+  padding: 0 10rpx 0;
+  width: 100%;
+  color: white;
+  z-index: 2;
+}
+.box .head .info .tit {
+  font-size: 22rpx;
+  margin-bottom: 15rpx;
+  width: 100%;
+  white-space: nowrap; /* 不换行 */
+  overflow: hidden; /* 隐藏超出的内容 */
+  text-overflow: ellipsis; /* 用省略号表示被隐藏的部分 */
+}
+.box .head .info .con {
+  font-size: 20rpx;
+  margin-bottom: 15rpx;
+  width: 100%;
+  white-space: nowrap; /* 不换行 */
+  overflow: hidden; /* 隐藏超出的内容 */
+  text-overflow: ellipsis; /* 用省略号表示被隐藏的部分 */
+}

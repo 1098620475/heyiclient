@@ -1,0 +1,45 @@
+<!--components/referee/index.wxml-->
+<view class="title">
+ <view class="tit">推荐人脉</view>
+ <view class="more">结识更多人脉</view>
+</view>
+<scroll-view class="scroll-box" scroll-x style="width: 100%">
+    <view class="box">
+      <view class="head">
+        <view class="info">
+          <view class="tit">马云</view>
+          <view class="con">CEO</view>
+        </view>
+      </view>
+      <view class="head">
+        <view class="info">
+          <view class="tit">马云</view>
+          <view class="con">CEO</view>
+        </view>
+      </view>
+      <view class="head">
+        <view class="info">
+          <view class="tit">马云</view>
+          <view class="con">CEO</view>
+        </view>
+      </view>
+      <view class="head">
+        <view class="info">
+          <view class="tit">马云</view>
+          <view class="con">CEO</view>
+        </view>
+      </view>
+      <view class="head">
+        <view class="info">
+          <view class="tit">马云</view>
+          <view class="con">CEO</view>
+        </view>
+      </view>
+      <view class="head">
+        <view class="info">
+          <view class="tit">马云</view>
+          <view class="con">CEO</view>
+        </view>
+      </view>
+    </view>
+</scroll-view>

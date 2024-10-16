@@ -1,0 +1,30 @@
+<!-- <view class="wrapper">
+  <t-upload
+    media-type="{{['video','image']}}"
+    files="{{originFiles}}"
+    gridConfig="{{gridConfig}}"
+    bind:success="handleSuccess"
+    bind:remove="handleRemove"
+    bind:click="handleClick"
+  />
+</view> -->
+<view class="box">
+  <view class="preview">
+    <view class="box" wx:for="{{originFiles}}">
+      <view class="preview-box" wx:if="{{item.type === 'image'}}">
+        <view class="loading" wx:if="{{item.type == 'loading'}}">上传中</view>
+        <image mode="aspectFill" src='{{item.url}}' wx:if="{{item.url}}"></image>
+      </view>
+    <view class="preview-box" wx:if="{{item.type === 'video'}}">
+      <video
+        bind:tap="onFileClick"
+        src="{{item.url}}"
+        controls
+        autoplay="{{false}}"
+        objectFit="contain"
+      ></video>
+    </view>
+    </view>
+  </view>
+  <view bind:tap="addFile">添加</view>
+</view>

@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "component_nav": "/components/head/common",
+    "referee": "/components/referee/index",
+    "t-tabs": "/components/tdesign-miniprogram/tabs/tabs",
+    "t-tab-panel": "/components/tdesign-miniprogram/tab-panel/tab-panel",
+    "t-sticky": "/components/tdesign-miniprogram/sticky/sticky"
+  },
+  "navigationStyle": "custom"
+}

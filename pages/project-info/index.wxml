@@ -1,0 +1,7 @@
+<view class="demo">
+  <!-- <markdown markdown="{{markdown}}"></markdown> -->
+  <t-demo title="项目描述" desc="">
+    <markdown markdown="{{info.content}}"></markdown>
+  </t-demo>
+</view> 
+  

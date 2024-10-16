@@ -1,0 +1,146 @@
+/* components/plugins/nav/test.wxss */
+.custom_nav {
+    width: 100%;
+    position: relative;
+    z-index: 99999;
+    font-size: 22rpx;
+    background-color: #F2F8F8;
+}
+
+.custom_nav_box {
+    position: fixed;
+    width: 100%;
+    z-index: 99999;
+    border-bottom: 1rpx solid rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(24rpx);
+    color: #333331;
+}
+
+.custom_nav_bar {
+    position: relative;
+    z-index: 9;
+}
+.custom_nav_box .left_title {
+    padding: 0 18rpx 0;
+}
+.custom_nav_box .center_title {
+    justify-content: center;
+    color: #2D2D2B;
+}
+.custom_nav_box .center_title .title-top {
+    display: flex;
+    justify-content: center;
+}
+.custom_nav_box .center_title .title-bottom {
+    display: flex;
+    justify-content: center;
+}
+.custom_nav_box .nav_title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.custom_nav_box .nav_title .left_icon {
+    position: absolute;
+    left: 18rpx;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+}
+.custom_nav_box .nav_title .title-info {
+   display: flex;
+}
+.custom_nav_box .nav_title .title-top {
+    font-size: 30rpx;
+    font-weight: 700;
+ }
+ .custom_nav_box .nav_title .title-bottom {
+    font-size: 18rpx;
+ }
+.custom_nav_box .nav_title image {
+    flex-shrink: 0;
+}
+.custom_nav_box .nav_title .back-home {
+    margin-right: 18rpx;
+}
+.custom_nav_box .icon_title {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    margin-left: 25rpx;
+    color: #333333;
+}
+.custom_nav_box .icon_title image{
+    margin-right: 15rpx;
+}
+
+.custom_nav_box .custom_nav_icon {
+    position:absolute;
+    z-index: 2;
+    display: inline-block;
+    border-radius: 50%;
+    vertical-align: top;
+    font-size:0;
+    box-sizing: border-box;
+}
+.custom_nav_box .custom_nav_icon.borderLine {
+    border: 1rpx solid rgba(255, 255, 255, 0.3);
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.navbar-v-line {
+    width: 1px;
+    margin-top: 14rpx;
+    height: 32rpx;
+    background-color: rgba(255, 255, 255, 0.3);
+    display: inline-block;
+    vertical-align: top;
+}
+
+.icon-back {
+    display: inline-block;
+    width: 74rpx;
+    padding-left: 20rpx;
+    vertical-align: top;
+    /* margin-top: 12rpx;
+    vertical-align: top; */
+    height: 100%;
+}
+
+.icon-home {
+    /* margin-top: 8rpx;
+    vertical-align: top; */
+    display: inline-block;
+    width: 80rpx;
+    text-align: center;
+    vertical-align: top;
+    height: 100%;
+}
+
+.icon-home .home_a {
+    height: 100%;
+    display: inline-block;
+    vertical-align: top;
+    width: 35rpx;
+}
+
+.custom_nav_box .back-pre,
+.custom_nav_box .back-home {
+    width: 55rpx;
+    height: 55rpx;
+    vertical-align: middle;
+}
+
+.navSearch {
+  width: 200px;
+  background: #fff;
+  font-size: 16px;
+  position: absolute;
+  padding: 0 20rpx;
+  z-index: 9;
+}

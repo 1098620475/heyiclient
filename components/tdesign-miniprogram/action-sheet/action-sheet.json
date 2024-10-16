@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "styleIsolation": "apply-shared",
+  "usingComponents": {
+    "t-popup": "../popup/popup",
+    "t-grid": "../grid/grid",
+    "t-grid-item": "../grid-item/grid-item"
+  }
+}
