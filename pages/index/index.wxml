@@ -11,9 +11,8 @@
   t-class="custom-tabs"
 >
   <t-tab-panel label="全部" value="0" />
-  <t-tab-panel label="找合作" value="1" />
-  <t-tab-panel label="找资源" value="2" />
-  <t-tab-panel label="找人脉" value="3" />
+  <t-tab-panel label="项目合作" value="1" />
+  <t-tab-panel label="项目资源" value="2" />
 </t-tabs>
 </t-sticky>
 <view class="project-list">

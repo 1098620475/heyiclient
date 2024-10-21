@@ -1,6 +1,7 @@
 {
   "component": true,
   "usingComponents": {
-    "t-upload": "/components/tdesign-miniprogram/upload/upload"
+    "t-upload": "/components/tdesign-miniprogram/upload/upload",
+    "t-popup": "/components/tdesign-miniprogram/popup/popup"
   }
 }

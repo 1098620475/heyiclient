@@ -8,23 +8,56 @@
     bind:click="handleClick"
   />
 </view> -->
-<view class="box">
+<view class="upload-box">
   <view class="preview">
-    <view class="box" wx:for="{{originFiles}}">
-      <view class="preview-box" wx:if="{{item.type === 'image'}}">
-        <view class="loading" wx:if="{{item.type == 'loading'}}">上传中</view>
-        <image mode="aspectFill" src='{{item.url}}' wx:if="{{item.url}}"></image>
+    <view class="box" wx:for="{{originFiles}}" bind:tap="handlePreview" data-fileitem="{{item}}">
+        <view class="close" catch:tap="handleClose" data-index="{{index}}">
+          <i class="iconfont icon-guanbi"></i>
+        </view>
+      <view wx:if="{{item.type == 'loading'}}" class="preview-box loading-box">
+        <view class="loading-dots">
+            <view class="loading-dot"></view>
+            <view class="loading-dot"></view>
+            <view class="loading-dot"></view>
+        </view>
       </view>
-    <view class="preview-box" wx:if="{{item.type === 'video'}}">
-      <video
-        bind:tap="onFileClick"
-        src="{{item.url}}"
-        controls
-        autoplay="{{false}}"
-        objectFit="contain"
-      ></video>
+      <view class="preview-box" wx:if="{{item.type === 'image'}}">
+        <image mode="aspectFill" src='{{item.previewUrl ? item.previewUrl : item.url}}' wx:if="{{item.url}}"></image>
+      </view>
+      <view class="preview-box file-box" wx:if="{{item.type === 'video'}}">
+        <i class="iconfont icon-shipin"></i>
+        <view class="preview-info">{{item.name}}</view>
+      </view>
+      <view class="preview-box file-box" wx:if="{{item.type === 'pdf'}}">
+        <i class="iconfont icon-pdf"></i>
+        <view class="preview-info">{{item.name}}</view>
+      </view>
+      <view class="preview-box file-box" wx:if="{{item.type != 'pdf' && item.type != 'video' && item.type != 'image'}}">
+        <i class="iconfont icon-wenjian"></i>
+        <view class="preview-info">{{item.name}}</view>
+      </view>
     </view>
-    </view>
+    <view class="box add-box" bind:tap="addFile"><i class="iconfont icon-tianjia"></i></view>
   </view>
-  <view bind:tap="addFile">添加</view>
 </view>
+
+<t-popup visible="{{uploadVisible}}" bind:visible-change="onVisibleChange" placement="{{'bottom'}}">
+  <view class="type-box">
+    <view class="type-box-title">请选择上传方式</view>
+    <view class="type-box-list">
+      <view class="type-box-item" bind:tap="handleWeixinUpload">
+        <view class="type-box-item-icon">
+          <i class="iconfont icon-weixin"></i>
+        </view>
+        <view class="type-box-item-info">微信聊天文件</view>
+      </view>
+      <view class="type-box-item" bind:tap="handlePhoneUpload">
+        <view class="type-box-item-icon">
+          <i class="iconfont icon-tupianshipin"></i>
+        </view>
+        <view class="type-box-item-info">本机/图片/视频</view>
+      </view>
+    </view>
+    <view class="type-tip">支持Word/PDF/PDF/WPS/图片/视频等</view>
+  </view>
+</t-popup>

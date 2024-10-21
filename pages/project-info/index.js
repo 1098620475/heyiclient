@@ -20,6 +20,9 @@ Page({
       this.setData({
         info: JSON.parse(options.detail)
       })
+      wx.setNavigationBarTitle({
+        title: this.data.info.title,
+      })
     },
 
     /**
@@ -90,5 +93,39 @@ Page({
           
         }
       })
+    },
+    handlePreview (e) {
+      wx.showLoading({
+        title: '文件获取中...',
+      })
+      let file = e.currentTarget.dataset.fileitem;
+      if (file.type == 'image' || file.type == 'video') {
+        wx.previewMedia({
+          sources: [
+            {
+              type: file.type,
+              url: file.previewUrl || file.url
+            }
+          ]
+        })
+        wx.hideLoading()
+      } else {
+        if (file.previewUrl) {
+          wx.openDocument({
+            filePath: file.previewUrl
+          })
+          wx.hideLoading()
+        } else {
+          wx.downloadFile({
+            url: file.url,
+            success(res) {
+              wx.hideLoading()
+              wx.openDocument({
+                filePath: res.tempFilePath
+              })
+            }
+          })
+        }
+      }
     }
 })

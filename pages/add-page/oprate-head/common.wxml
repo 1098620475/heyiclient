@@ -1,0 +1,22 @@
+<view class="custom_nav" style="height:{{navbarHeight}}px;">
+  <view class="custom_nav_box" style="height:{{navbarHeight}}px;">
+    <view class="custom_nav_bar" style="top:{{statusBarHeight}}px; height:{{cusnavH}}px;">
+      <block>
+       <view class="box"> 
+         <i bind:tap="_goBack" class="iconfont icon-guanbi"></i>
+         <view class="btn {{loading ? 'disabled' : ''}}" bind:tap="submit">{{loading? '提交中...' : '提交'}}</view>
+       </view>
+        <!-- <view bindtap="titleClick" class="nav_title {{status == 'left'? 'left_title' : 'center_title'}}" style="height:{{cusnavH}}px;">
+          <image wx:if="{{status == 'left'}}" src='./icon.ico' mode='aspectFill' class='back-home'></image>
+          <view class="title-info">
+            <image src='./icon.ico' wx:if="{{status !== 'left'}}" mode='aspectFill' class='back-home left_icon'></image>
+            <view>
+              <view class="title-top">{{vTitle}}</view>
+              <view class="title-bottom">{{ status == 'left' ? '用法律搭建商业桥梁' : '找合作 找资源 找人脉'}}</view>
+            </view>
+          </view>
+        </view> -->
+      </block>
+    </view>
+  </view>
+</view>

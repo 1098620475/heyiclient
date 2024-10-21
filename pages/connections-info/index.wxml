@@ -1,0 +1,30 @@
+<!--pages/connections-info/index.wxml-->
+<nav bind:homeClick='homeClick' showIcon="{{false}}" showHome='{{true}}' showBack='{{true}}' haveBack='{{true}}'>pages/connections-info/index.wxml</nav>
+
+
+<view class="box">
+  <view class="edit-box">
+    <view class="edit-btn">
+      <i class="iconfont icon-wenjian"></i>
+      <view>编辑</view>
+    </view>
+  </view>
+  <view class="box-info">
+    <view class="head-img"></view>
+    <view class="box-name">王涛 <span>|</span> 职位</view>
+    <view class="info-box">
+      <view class="info-box-item">
+        电话：13934691550
+      </view>
+      <view class="info-box-item">
+        电话：13934691550
+      </view>
+      <view class="info-box-item">
+        电话：13934691550
+      </view>
+      <view class="info-box-item">
+        电话：13934691550
+      </view>
+    </view>
+  </view>
+</view>

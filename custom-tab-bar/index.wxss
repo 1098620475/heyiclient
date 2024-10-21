@@ -1,3 +1,5 @@
+
+@import '../style/iconfont.wxss';
 .tab-bar {
   position: fixed;
   bottom: 0;
@@ -24,6 +26,7 @@
 .tab-bar-item .image {
   width: 48rpx;
   height: 48rpx;
+  color: white;
 }
  
 .bulge {
@@ -78,6 +81,11 @@
   border-radius: 50%;
   background-color: red;
   flex-shrink: 0;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40rpx;
 }
 .add-box .con .con-box {
   width: 47%;

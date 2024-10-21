@@ -162,7 +162,8 @@ page {
 	border-radius: 20rpx;
 	display: flex;
 	flex-direction: column;
-	box-shadow: 0 0 2rpx 3rpx rgba(0, 0, 0, 0.1);
+	box-shadow: 0px 0px 33px -5px rgba(0,0,0,0.1);
+	margin-bottom: 28rpx;
 }
 
 .project-box .title {
@@ -209,6 +210,12 @@ page {
 }
 .project-box .content {
 	font-size: 24rpx;
+}
+
+.bottom-box {
+	height: calc(96rpx + constant(safe-area-inset-bottom));
+  /* 兼容 iOS >= 11.2 */
+	height: calc(96rpx + env(safe-area-inset-bottom));
 }
 
 

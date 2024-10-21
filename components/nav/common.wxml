@@ -6,7 +6,6 @@
       </block>
       <block wx:else>
         <view wx:if="{{!showIcon}}" class="custom_nav_icon {{!haveBack||'borderLine'}}" style="height:{{navbarBtn.height}}px;line-height:{{navbarBtn.height-2}}px; top:{{navbarBtn.top}}px; left:{{navbarBtn.right}}px; border-radius:{{navbarBtn.height/2}}px;">
-          {{haveBack}}
           <view wx:if="{{haveBack && showBack}}" class="icon-back" bindtap='_goBack'>
             <image src='./back.ico' mode='aspectFill' class='back-pre'></image>
           </view>
@@ -21,7 +20,6 @@
           <image src='./icon.ico' wx:if="{{showIcon}}" mode='aspectFill' class='back-home'></image>{{vTitle}}<image src='./transfer.ico' style="width: 25rpx;margin-left: 10rpx;" wx:if="{{showTrans}}" mode='aspectFit' class='back-home'></image>
         </view>
       </block>
-
     </view>
   </view>
 </view>

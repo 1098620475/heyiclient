@@ -1,0 +1,51 @@
+/* components/plugins/nav/test.wxss */
+@import '../../../style/iconfont.wxss';
+.custom_nav {
+    width: 100%;
+    position: relative;
+    z-index: 99999;
+    font-size: 22rpx;
+    background-color: #F2F8F8;
+}
+
+.custom_nav_box {
+    position: fixed;
+    width: 100%;
+    z-index: 99999;
+    border-bottom: 1rpx solid rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(24rpx);
+    color: #333331;
+}
+
+.custom_nav_bar {
+    position: relative;
+    z-index: 9;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding-left: 44rpx;
+}
+.box .icon-guanbi {
+    font-size: 44rpx;
+    font-weight: bold;
+}
+.box .btn {
+    height: 64rpx;
+    padding: 0 22rpx 0;
+    border-radius: 32rpx;
+    background-color: #B8151A;
+    display: flex;
+    align-items: center;
+    font-size: 26rpx;
+    font-weight: 500;
+    color: #fff;
+    margin-left: 88rpx;
+}
+
+.box .disabled {
+    opacity: 0.6;
+}

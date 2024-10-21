@@ -9,8 +9,11 @@ Page({
       markdown: ``,
       form: {
         title: '',
-        content: ''
-      }
+        content: '',
+        fileList: []
+      },
+      loading: false,
+      uploadVisible: false
     },
 
     /**
@@ -78,14 +81,50 @@ Page({
         'form.content': e.detail.value
       })
     },
+    bindFileInput(list) {
+      console.log(list, 'GGGGGGGGGGGGG')
+      this.setData({
+        'form.fileList': list.detail || []
+      })
+    },
     handleSubmit () {
       let query = this.data.form;
+      let errorInfo = ''
+      let that = this;
+      if (!query.title) {
+        errorInfo = '请输入项目标题'
+      }
+      if (!query.content) {
+        errorInfo = '请输入项目内容'
+      }
+      if (errorInfo) {
+        wx.showToast({
+          title: errorInfo,
+          icon: 'none'
+        })
+        return
+      }
+      this.setData({
+        loading: true
+      })
+      wx.showLoading({
+        title: '提交中'
+      })
       until.request({
         action: 'app.project.addProject',
         data: query
       }).then(function (e) {
+        that.setData({
+          loading: false
+        })
+        wx.hideLoading()
         if (e.data.success) {
-          
+          wx.switchTab({
+            url: '/pages/index/index',
+          })
+          wx.showToast({
+            title: '发布成功',
+          })
         }
       })
     }

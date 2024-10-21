@@ -68,7 +68,6 @@ Component({
         data: query
       }).then(function (e) {
         if (e.data.success) {
-          console.log(e, 'oooo')
           that.setData({
             projectList: e.data.data
           })
@@ -76,7 +75,6 @@ Component({
       })
     },
     toDetail (e) {
-      console.log(e, 'OOOOOOOOOOOOOOOO')
       let detail = e.currentTarget.dataset.info;
       console.log(detail)
       wx.navigateTo({

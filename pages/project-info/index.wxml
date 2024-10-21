@@ -1,7 +1,44 @@
-<view class="demo">
-  <!-- <markdown markdown="{{markdown}}"></markdown> -->
-  <t-demo title="项目描述" desc="">
-    <markdown markdown="{{info.content}}"></markdown>
-  </t-demo>
+<view class="box">
+  <view class="title">{{info.title}}</view>
+  <view class="tag">
+    <view class="tag-box">项目</view>
+    <view class="tag-box">项目计划书</view>
+  </view>
+  <view class="box-info">
+    <!-- <view class="box-title">项目详情</view> -->
+    <view class="box-content">
+      <markdown markdown="{{info.content}}"></markdown>
+    </view>
+  </view>
+  <view class="box-file">
+    <view class="file-box" wx:for="{{info.fileList}}" >
+      <view wx:if="{{item.type == 'image'}}" data-fileitem='{{item}}' bind:tap="handlePreview">
+        <image mode="widthFix" src="{{item.url}}"></image>
+      </view>
+      <view wx:if="{{item.type == 'video'}}">
+        <video mode="widthFix" src="{{item.url}}"></video>
+      </view>
+      <view wx:if="{{item.type != 'video' && item.type != 'image'}}" data-fileitem='{{item}}' bind:tap="handlePreview">
+        <view class="file-preview">
+          <view class="file-name"><i class="iconfont icon-wenjian"></i>{{item.name}}</view><view class="oprate"><view>查看文件</view></view>
+        </view>
+      </view>
+    </view>
+  </view>
 </view> 
+
+
+<view class="bottom-box"></view>
+
+<view class="bottom-oprate">
+  <view class="oprate-box">
+    <view class="oprate-box-item">
+      <i class="iconfont icon-weixin"></i>
+      <view class="text">转发分享</view>
+    </view>
+  </view>
+  <view class="bottom-btn">
+    我想合作
+  </view>
+</view>
   

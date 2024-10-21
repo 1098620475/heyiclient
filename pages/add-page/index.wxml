@@ -1,23 +1,12 @@
-<view class="demo">
+<header loading='{{loading}}' bind:submit='handleSubmit'></header>
+<view class="box">
   <!-- <markdown markdown="{{markdown}}"></markdown> -->
-  <t-demo title="项目标题" desc="">
-    <t-input
-      placeholder="请输入项目标题"
-      borderless="{{true}}"
-      style="{{style}}"
-      value="{{form.title}}"
-      bindchange="bindTitleInput"
-    />
-  </t-demo>
-  <t-demo title="项目描述" desc="">
-    <t-textarea bindchange='bindContentInput' t-class="external-class" placeholder="请输项目描述" disableDefaultPadding="{{true}}" />
-  </t-demo>
-  <t-demo title="项目文件" desc="">
-    <view class="upload-demo">
-      <multiple />
+  <view class="page-title">项目标题</view>
+  <input class="input-box" bindinput='bindTitleInput' value="{{form.title}}" auto-focus placeholder="请输入项目名称"/>
+  <view class="page-title">项目内容</view>
+  <textarea bindinput='bindContentInput' value="{{form.content}}" class="text-box" maxlength='-1' bindblur="bindTextAreaBlur" auto-height placeholder="请输入项目内容" />    
+  <view class="upload-demo">
+      <multiple  bind:change='bindFileInput'/>
     </view>
-  </t-demo>
 </view>
-
-<t-button block theme="primary" size="large" bind:tap="handleSubmit">提交</t-button>
 

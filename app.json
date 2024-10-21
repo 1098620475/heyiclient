@@ -3,13 +3,11 @@
         "pages/index/index",
         "pages/connections/index",
         "pages/add-page/index",
-        "pages/project-info/index"
+        "pages/project-info/index",
+        "pages/connections-info/index"
     ],
-    "subpackages": [
-        
-    ],
+    "subpackages": [],
     "usingComponents": {
-        "t-demo": "./components/demo-block/index",
         "t-button": "./components/tdesign-miniprogram/button/button"
     },
     "window": {

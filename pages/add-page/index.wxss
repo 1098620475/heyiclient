@@ -1,1 +1,22 @@
 /* pages/add-page/index.wxss */
+.box {
+  padding: 50rpx 44rpx 0;
+  box-sizing: border-box;
+}
+.page-title {
+  font-size: 32rpx;
+  font-weight: 600;
+  margin-bottom: 28rpx;
+}
+.input-box {
+  width: 100%;
+  margin-bottom: 50rpx;
+}
+.text-box {
+  border: 2rpx dashed #ccc;
+  width: 100%;
+  padding: 30rpx;
+  box-sizing: border-box;
+  border-radius: 10rpx;
+  margin-bottom: 50rpx;
+}

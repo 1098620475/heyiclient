@@ -93,8 +93,9 @@
 }
 
 .h2w__main {
-    margin: 0 40rpx 40rpx 40rpx;
-    padding-top: 40rpx;
+    /* margin: 0 40rpx 40rpx 40rpx;
+    padding-top: 40rpx; */
+    font-size: 28rpx !important;
 }
 
 /**标题**/
@@ -108,25 +109,35 @@
 }
 
 .h2w__h1 {
-    border-bottom-style: double;
-    border-bottom-width: 6rpx;
-    font-size: 42rpx;
-    padding-bottom: 10rpx;
-    margin-bottom: 20rpx;
+    font-size: 30rpx;
+    color: #323232;
+
+    border-left: 13rpx solid #B8151A;
+    padding-left: 12rpx;
+    color: #2F2F2F;
+    margin-bottom: 42rpx;
 }
 
 .h2w__h2 {
-    border-bottom-style: solid;
-    border-bottom-width: 1rpx;
-    font-size: 40rpx;
-    padding-bottom: 8rpx;
-    margin-bottom: 18rpx;
+    font-size: 28rpx;
+    color: #323232;
+
+    border-left: 13rpx solid #B8151A;
+    padding-left: 12rpx;
+    color: #2F2F2F;
+    margin-bottom: 30rpx;
 }
 
 .h2w__h3 {
     font-size: 38rpx;
     padding-bottom: 6rpx;
     margin-bottom: 12rpx;
+    color: #323232;
+    margin-bottom: 30rpx;
+
+    border-left: 13rpx solid #B8151A;
+    padding-left: 12rpx;
+    color: #2F2F2F;
 }
 
 .h2w__h4 {
@@ -318,9 +329,6 @@
 /**块元素**/
 .h2w__p {
     margin: 20rpx 0 20rpx 0;
-    /*word-wrap:break-word;
-    word-break:break-all;*/
-    /*text-align:justify;*/
 }
 
 .h2w__div {

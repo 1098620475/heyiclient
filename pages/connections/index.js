@@ -85,6 +85,11 @@ Component({
           url: '/pages/common/getWebView/index?url=' + this.data.articleUrl
         })
       }
+    },
+    toInfo () {
+      wx.navigateTo({
+        url: '/pages/connections-info/index',
+      })
     }
   }
 })

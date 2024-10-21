@@ -1,1 +1,130 @@
 /* pages/add-page/index.wxss */
+page {
+  background-color: #fff;
+}
+.box {
+  padding: 0 32rpx 30rpx;
+}
+.box .tag {
+  display: flex;
+  margin-bottom: 54rpx;
+}
+.tag .tag-box {
+  height: 46rpx;
+  padding: 0 22rpx 0;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  background-color: #F6F6F6;
+  color: #2F2F2F;
+  font-size: 22rpx;
+  margin-right: 10rpx;
+}
+.box .title {
+  font-size: 32rpx;
+  color: #313131;
+  font-weight: 700;
+  padding: 32rpx 0 32rpx;
+}
+
+.box-info .box-title {
+  font-size: 30rpx;
+  font-weight: 700;
+  border-left: 12rpx solid #B8151A;
+  padding-left: 12rpx;
+  color: #2F2F2F;
+}
+.box-info .box-content {
+  font-size: 26rpx;
+}
+.box-content .h2w__main {
+  padding: 0 ;
+  margin: 0;
+}
+
+.file-box {
+  margin-bottom: 10rpx;
+}
+
+.file-preview {
+  /* border: 2rpx solid #B8151A; */
+  padding: 50rpx 20rpx 50rpx;
+  border-radius: 15rpx;
+  display: flex;
+  justify-content: space-between;
+  color: #2F2F2F;
+  font-size: 30rpx;
+  align-items: center;
+  box-shadow: 0px 0px 33px -5px rgba(0,0,0,0.3);
+}
+.file-name {
+  display: flex;
+  align-items: center;
+  font-size: 32rpx;
+}
+.file-name .iconfont {
+  margin-right: 15rpx;
+  color:  #B8151A;
+  font-size: 60rpx;
+}
+.file-box .oprate  {
+  flex-shrink: 0;
+}
+.file-box .oprate view{
+  height: 40rpx;
+  border-radius: 20rpx;
+  border: 2rpx solid #B8151A;
+  color: #B8151A;
+  padding: 10rpx 20rpx 10rpx;
+}
+
+
+.bottom-box {
+  height: 125rpx;
+  background-color: white;
+}
+.bottom-oprate {
+  position: fixed;
+  bottom: 0;
+  height: 124rpx;
+  border-top: 2rpx solid #F9F9F9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 30rpx 0 56rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+.bottom-oprate .bottom-btn {
+  height: 88rpx;
+  display: flex;
+  align-items: center;
+  background-color: #B8151A;
+  color: white;
+  border-radius: 20rpx;
+  font-size: 32rpx;
+  width: 57%;
+  justify-content: center;
+}
+.oprate-box {
+  width: 43%;
+  display: flex;
+}
+.oprate-box-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.oprate-box-item .iconfont{
+  font-size: 44rpx;
+}
+.oprate-box-item .icon-weixin{
+  color: #16D46B;
+}
+.oprate-box-item .text{
+  font-size: 22rpx;
+  color: #3B3B3B;
+}

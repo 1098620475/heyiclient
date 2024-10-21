@@ -1,0 +1,75 @@
+/* pages/connections-info/index.wxss */
+page {
+  background-image: url(http://www.memeschool.top:8080/heyi/zBgPKulvCSAZ6e1a56977be5cf377a463e30856dde1e.png);
+  height: 100%;
+  background-repeat: no-repeat;
+  background-color: #F3F4F8;
+  background-position: 85% 15%;
+  background-size: 50%;
+}
+
+
+.box {
+  padding: 0 30rpx 0;
+  box-sizing: border-box;
+  width: 100%;
+}
+.edit-box {
+  height: 140rpx;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-bottom: 20rpx;
+  box-sizing: border-box;
+}
+.edit-btn {
+  height: 76rpx;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(24rpx);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 15rpx;
+  color: #2E2F31;
+  font-size: 24rpx;
+  justify-content: center;
+  padding: 0 34rpx 0;
+  box-shadow:  0px 10px -5px rgba(0,0,0,0.1)
+}
+.box-info {
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(24rpx);
+  padding: 90rpx 38rpx 40rpx;
+  border-radius: 30rpx;
+  /* margin-top: 140rpx; */
+  position: relative;
+}
+
+.box-info .head-img {
+  width: 148rpx;
+  height: 148rpx;
+  border: 5rpx solid #FFF;
+  background-color: #fff;
+  position: absolute;
+  border-radius: 50%;
+  top: -95rpx;
+  background-size: cover;
+  background-image: url(http://www.memeschool.top:8080/heyi/zBgPKulvCSAZ6e1a56977be5cf377a463e30856dde1e.png);
+}
+
+
+.box-name {
+  font-size: 28rpx;
+  font-weight: 700;
+  margin-bottom: 40rpx;
+}
+.box-name span {
+  margin: 0 10rpx 0;
+}
+.info-box {
+  font-size: 20rpx;
+}
+
+.info-box .info-box-item {
+  margin-bottom: 50rpx;
+}

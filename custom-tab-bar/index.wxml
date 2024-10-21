@@ -11,8 +11,8 @@
     <view class="tit">发布功能</view>
     <view class="con">
       <view class="con-box" bind:tap="toAdd" data-type="project">
-        <view class="image">
-          
+        <view class="image" style="background-color: #52ABED;">
+          <i class="iconfont icon-xiangmu"></i>
         </view>
         <view class="content">
           <view class="content-tit">发布合作项目</view>
@@ -20,8 +20,8 @@
         </view>
       </view>
       <view class="con-box" bind:tap="toAdd" data-type="resource">
-        <view class="image">
-          
+        <view class="image" style="background-color: #E16D56;">
+          <i class="iconfont icon-ziyuan"></i>
         </view>
         <view class="content">
           <view class="content-tit">发布项目资源</view>

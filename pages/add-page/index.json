@@ -4,6 +4,8 @@
       "t-input": "/components/tdesign-miniprogram/input/input",
       "multiple": "./multiple",
       "t-textarea": "/components/tdesign-miniprogram/textarea/textarea",
-      "markdown": "wx-markdown/component/index"
-    }
+      "markdown": "wx-markdown/component/index",
+      "header": "./oprate-head/common"
+    },
+    "navigationStyle": "custom"
 }

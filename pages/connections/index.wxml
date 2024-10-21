@@ -1,6 +1,6 @@
 <component_nav class="nav_component" isSearch="{{false}}" v-title="{{'合亿'}}" bind:titleClick='toSchoolSelect' bind:commonNavAttr='commonNavAttr' showIcon='{{true}}'></component_nav>
 <!-- <referee></referee> -->
-<t-sticky offset-top="{{ offsetTop }}">
+<!-- <t-sticky offset-top="{{ offsetTop }}">
   <t-tabs
   defaultValue="{{0}}"
   sticky
@@ -13,13 +13,13 @@
   <t-tab-panel label="最新" value="0" />
   <t-tab-panel label="热度" value="1" />
 </t-tabs>
-</t-sticky>
+</t-sticky> -->
 <view class="project-list">
-  <view class="project-box">
+  <view class="project-box" bind:tap="toInfo">
     <view class="title">
       <image class="title-icon" src="http://www.memeschool.top:8080/heyi/zBgPKulvCSAZ6e1a56977be5cf377a463e30856dde1e.png"></image>
       <view class="title-con">
-        <view class="title-name"><view class="name">王涛</view> <span class="name-fg">|</span> <view class="name-ms">CEO</view></view>
+        <view class="title-name"><view class="name">王涛</view> <span class="name-fg">|</span> <view class="name-ms">测试职位</view></view>
         <view class="title-tag"><view>餐饮美食</view></view>
       </view>
     </view>

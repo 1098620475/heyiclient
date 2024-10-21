@@ -30,6 +30,9 @@ Component({
     },
     methods: {
       toAdd (e) {
+        this.setData({
+          visible: false
+        })
         let type = e.currentTarget.dataset.type
         wx.navigateTo({
           url: '/pages/add-page/index?type=' + type,
