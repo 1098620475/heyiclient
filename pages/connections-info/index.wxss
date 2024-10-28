@@ -72,4 +72,11 @@ page {
 
 .info-box .info-box-item {
   margin-bottom: 50rpx;
+  display: flex;
+  align-items: center;
+}
+
+.info-box .info-box-item .iconfont {
+  margin-right: 25rpx;
+  color: #B8151A;
 }

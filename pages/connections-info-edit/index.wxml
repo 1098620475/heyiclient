@@ -1,0 +1,55 @@
+<view class="box">
+  <view class="head">
+    <button class="head-img" open-type='chooseAvatar' bindchooseavatar='chooseavatar'>
+      <!-- <image src="{{form.avatarUrl}}"></image> -->
+      <image wx:if="{{form.avatarUrl}}" class="image" src="{{form.avatarUrl}}"></image>
+      <i wx:else class="iconfont icon-touxiang"></i>
+      <view class="icon">
+        <i class="iconfont icon-genghuan"></i>
+      </view>
+    </button>
+  </view>
+  <view class="info-box">
+    <view class="info-box-item">
+      <view class="label">姓名</view>
+      <view class="value">
+        <input type="nickname" data-key="name" class="input-box" bindinput='bindTitleInput' value="{{form.name}}"  placeholder="请输入项目名称"/>
+      </view>
+    </view>
+    <view class="info-box-item">
+      <view class="label">手机</view>
+      <view class="value">
+        <input class="input-box" data-key="phone" bindinput='bindTitleInput' value="{{form.phone}}"  placeholder="请输入项目名称"/>
+      </view>
+    </view>
+    <view class="info-box-item">
+      <view class="label">微信号</view>
+      <view class="value">
+        <input data-key="weixin" class="input-box" bindinput='bindTitleInput' value="{{form.weixin}}"  placeholder="请输入项目名称"/>
+      </view>
+    </view>
+    <view class="info-box-item">
+      <view class="label">公司/品牌</view>
+      <view class="value">
+        <input data-key="company" class="input-box" bindinput='bindTitleInput' value="{{form.company}}"  placeholder="请输入项目名称"/>
+      </view>
+    </view>
+    <view class="info-box-item">
+      <view class="label">职位</view>
+      <view class="value">
+        <input data-key="position" class="input-box" bindinput='bindTitleInput' value="{{form.position}}"  placeholder="请输入项目名称"/>
+      </view>
+    </view>
+    <view class="info-box-item">
+      <view class="label">行业分类</view>
+      <view class="value">
+        <input data-key="industry" class="input-box" bindinput='bindTitleInput' value="{{form.industry}}"  placeholder="请输入项目名称"/>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="bottom-padding"></view>
+<view class="bottom-box">
+  <view class="submit-btn">提交</view>
+</view>

@@ -4,7 +4,8 @@
         "pages/connections/index",
         "pages/add-page/index",
         "pages/project-info/index",
-        "pages/connections-info/index"
+        "pages/connections-info/index",
+        "pages/connections-info-edit/index"
     ],
     "subpackages": [],
     "usingComponents": {

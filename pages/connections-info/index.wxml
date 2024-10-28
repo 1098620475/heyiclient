@@ -4,7 +4,7 @@
 
 <view class="box">
   <view class="edit-box">
-    <view class="edit-btn">
+    <view class="edit-btn" bind:tap="toEdit">
       <i class="iconfont icon-wenjian"></i>
       <view>编辑</view>
     </view>
@@ -14,16 +14,16 @@
     <view class="box-name">王涛 <span>|</span> 职位</view>
     <view class="info-box">
       <view class="info-box-item">
-        电话：13934691550
+        <i class="iconfont icon-dianhua"></i>电话：13934691550
       </view>
       <view class="info-box-item">
-        电话：13934691550
+        <i class="iconfont icon-weixin"></i>微信：13934691550
       </view>
       <view class="info-box-item">
-        电话：13934691550
+        <i class="iconfont icon-gongsixinxi"></i>公司：13934691550
       </view>
       <view class="info-box-item">
-        电话：13934691550
+        <i class="iconfont icon-hangye"></i>行业：13934691550
       </view>
     </view>
   </view>

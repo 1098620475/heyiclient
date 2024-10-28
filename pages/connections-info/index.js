@@ -67,5 +67,10 @@ Page({
         wx.switchTab({
           url: '/pages/index/index',
         })
+    },
+    toEdit () {
+      wx.navigateTo({
+        url: '/pages/connections-info-edit/index',
+      })
     }
 })

@@ -119,7 +119,6 @@ Component({
             })
           },
           fail: function(e) {
-            console.log(e, 'OOOOOOOOOOOOOOO')
             resolve({
               success: false
             })
